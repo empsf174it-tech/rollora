@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <i class="ph-fill ph-star"></i> <span style="color:var(--color-text-muted)">(${p.rating})</span>
         </div>
         <div class="card-price tabular">$${p.price.toFixed(2)}</div>
-        <label class="checkbox-label" style="align-self: flex-start; margin-bottom: 16px;">
+        <label class="checkbox-label card-compare">
           <input type="checkbox" class="compare-cb" data-id="${p.id}"> Compare
         </label>
         <div class="card-actions">
@@ -223,9 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <p style="flex:1;">"${r.text}"</p>
           <div style="width:100%; display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-border); padding-top:var(--space-2); margin-top:var(--space-4);">
-            <div>
-              <strong>${r.author}</strong><br>
-              <span style="font-size:0.75rem; color:var(--color-success);"><i class="ph-fill ph-check-circle"></i> Verified</span>
+            <div style="display:flex; align-items:center; gap:var(--space-2);">
+              <img class="review-avatar" src="${r.avatar || `https://i.pravatar.cc/80?u=${encodeURIComponent(r.author)}`}" alt="${r.author}" loading="lazy" width="36" height="36">
+              <div>
+                <strong>${r.author}</strong><br>
+                <span style="font-size:0.75rem; color:var(--color-success);"><i class="ph-fill ph-check-circle"></i> Verified</span>
+              </div>
             </div>
             <div style="font-size:0.75rem; color:var(--color-text-muted); text-align:right;">
               For ${prod ? prod.name : 'Roller'}

@@ -22,9 +22,9 @@ const defaultRoutines = [
 ];
 
 const defaultReviews = [
-  { id: 'rev1', productId: 'p1', author: 'Alex M.', rating: 5, date: '2023-10-15', text: 'This grid roller completely changed my recovery game. Perfect firmness.', verified: true },
-  { id: 'rev2', productId: 'p3', author: 'Jamie T.', rating: 5, date: '2023-11-02', text: 'The vibration feature is worth every penny. Excellent for deep tissue.', verified: true },
-  { id: 'rev3', productId: 'p1', author: 'Chris R.', rating: 4, date: '2023-09-20', text: 'Good roller, maybe a bit too firm for beginners.', verified: true },
+  { id: 'rev1', productId: 'p1', author: 'Alex M.', avatar: 'https://randomuser.me/api/portraits/men/32.jpg', rating: 5, date: '2023-10-15', text: 'This grid roller completely changed my recovery game. Perfect firmness.', verified: true },
+  { id: 'rev2', productId: 'p3', author: 'Jamie T.', avatar: 'https://randomuser.me/api/portraits/women/44.jpg', rating: 5, date: '2023-11-02', text: 'The vibration feature is worth every penny. Excellent for deep tissue.', verified: true },
+  { id: 'rev3', productId: 'p1', author: 'Chris R.', avatar: 'https://randomuser.me/api/portraits/men/75.jpg', rating: 4, date: '2023-09-20', text: 'Good roller, maybe a bit too firm for beginners.', verified: true },
 ];
 
 const defaultOrders = [

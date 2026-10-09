@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebarToggle.innerHTML = open ? '<i class="ph ph-x"></i>' : '<i class="ph ph-list"></i>';
   }
   sidebarToggle.addEventListener('click', () => setSidebarOpen(!sidebar.classList.contains('open')));
+  // Close the drawer when tapping the backdrop or choosing a section
+  sidebar.addEventListener('click', (e) => {
+    if (e.target === sidebar || e.target.closest('.sidebar-link')) setSidebarOpen(false);
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setSidebarOpen(false); });
 
   // Guides / Routines tabs
   const tabGuides = document.getElementById('tab-guides');
